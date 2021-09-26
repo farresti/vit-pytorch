@@ -1,8 +1,3 @@
-"""
-Copyright AriadNEXT, Inc - All Rights Reserved
-Unauthorized copying of this file, via any medium is strictly prohibited
-Proprietary and confidential
-"""
 from utils.activation import get_activation_fn
 from typing import List
 import torch.nn as nn
