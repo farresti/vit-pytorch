@@ -10,7 +10,7 @@ For more details on the models themselves, please refer to the corresponding pap
 
 # Current implemented models
 
-## Vision Transformer
+## Vision Transformer (ViT)
 
 ### Usage
 
@@ -38,6 +38,36 @@ print(y.shape) # (1, 1000)
     author  = {Alexey Dosovitskiy and Lucas Beyer and Alexander Kolesnikov and Dirk Weissenborn and Xiaohua Zhai and Thomas Unterthiner and Mostafa Dehghani and Matthias Minderer and Georg Heigold and Sylvain Gelly and Jakob Uszkoreit and Neil Houlsby},
     year    = {2020},
     eprint  = {2010.11929},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.CV}
+}
+```
+
+## Convolutional Neural Networks Meet Vision Transformers (CMT)
+
+### Usage
+
+```python
+from models.cmt import CMT, cmt_configs
+import torch
+
+
+cmt = CMT(num_classes=1000,
+          input_size=224,
+          **cmt_configs('CMT-Ti'))
+x = torch.rand((1, 3, 224, 224)) # input
+y = cmt(x) # output
+print(y.shape) # (1, 1000)
+```
+
+### Paper
+
+```bibtex
+@misc{guo2021cmt,
+    title   = {CMT: Convolutional Neural Networks Meet Vision Transformers},
+    author  = {Guo, Jianyuan and Han, Kai and Wu, Han and Xu, Chang and Tang, Yehui and Xu, Chunjing and Wang, Yunhe},
+    year    = {2021},
+    eprint  = {2107.06263},
     archivePrefix = {arXiv},
     primaryClass = {cs.CV}
 }
