@@ -12,7 +12,7 @@ For more details on the models themselves, please refer to the corresponding pap
 
 ## Vision Transformer
 
-## Usage
+### Usage
 
 ```python
 from models.vit import VisionTransformer
@@ -30,6 +30,7 @@ y = vit(x) # output
 print(y.shape) # (1, 1000)
 ```
 
+### Paper
 
 ```bibtex
 @misc{dosovitskiy2020image,
